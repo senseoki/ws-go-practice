@@ -49,11 +49,11 @@ func main() {
 func zapConfig() *zap.Logger {
 	now := time.Now()
 	hook := lumberjack.Logger{
-		Filename:   fmt.Sprintf("logs/%04d%02d%02d%02d%02d%02d.log", now.Year(), now.Month(), now.Day(), now.Hour(), now.Minute(), now.Second()),
-		MaxSize:    1,
-		MaxBackups: 30,
-		MaxAge:     7,
-		Compress:   false,
+		Filename: fmt.Sprintf("logs/%04d%02d%02d%02d%02d%02d.log", now.Year(), now.Month(), now.Day(), now.Hour(), now.Minute(), now.Second()),
+		MaxSize:  1, // megabytes
+		//MaxBackups: 30,
+		MaxAge:   30, // days
+		Compress: false,
 	}
 
 	encoderConfig := zapcore.EncoderConfig{
@@ -66,7 +66,7 @@ func zapConfig() *zap.Logger {
 		LineEnding:     zapcore.DefaultLineEnding,
 		EncodeLevel:    zapcore.LowercaseLevelEncoder,
 		EncodeTime:     zapcore.ISO8601TimeEncoder,
-		EncodeDuration: zapcore.SecondsDurationEncoder, //
+		EncodeDuration: zapcore.SecondsDurationEncoder,
 		EncodeCaller:   zapcore.FullCallerEncoder,
 		EncodeName:     zapcore.FullNameEncoder,
 	}
