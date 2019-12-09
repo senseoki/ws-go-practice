@@ -4,4 +4,4 @@
   zap, lumberjack integration test project in iris web framework.
 
 * ## mastering-go
-  Book mastering go walkthrough project
+  Book mastering go practice project
