@@ -1,2 +1,0 @@
-{"level":"info","time":"2019-12-10T09:59:47+09:00","linenum":"c:/Users/User/dev/ws-go-practice/iris-zap-test/main.go:30","msg":"Logger Test Info","serviceName":"serviceName","url":"http://test.com","attempt":3,"backoff":1}
-{"level":"error","time":"2019-12-10T09:59:47+09:00","linenum":"c:/Users/User/dev/ws-go-practice/iris-zap-test/main.go:36","msg":"This is an ERROR message","serviceName":"serviceName"}
