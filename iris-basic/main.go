@@ -9,6 +9,15 @@ import (
 )
 
 func main() {
+	app := newApp()
+
+	//app.Run(iris.Addr(":9500"), iris.WithoutServerError(iris.ErrServerClosed))
+	//app.Run(iris.TLS(":443", "mycert.cert", "mykey.key"))
+	app.Run(iris.Addr(":9500"))
+	
+}
+
+func newApp() *iris.Application {
 	app := iris.New()
 
 	app.Logger().AddOutput()
@@ -36,7 +45,7 @@ func main() {
 	})
 
 	// Path Parameters - Built-in Dependencies
-	app.Get("/hero/{to:string}", hero.Handler(hello))
+	app.Get("/hero/{to:string}", hero.Handler(Hello))
 
 	hero.Register(
 		&service.MyHelloService{
@@ -52,18 +61,19 @@ func main() {
 	)
 
 	// Services - Static Dependencies
-	app.Get("/hero/di/{to:string}", hero.Handler(helloHandler))
+	app.Get("/hero/di/{to:string}", hero.Handler(TestService))
 
-	//app.Run(iris.Addr(":9500"), iris.WithoutServerError(iris.ErrServerClosed))
-	app.Run(iris.Addr(":9500"))
+	return app
 }
 
-func hello(to string, ctx iris.Context) string {
+// Hello ...
+func Hello(to string, ctx iris.Context) string {
 	ctx.Application().Logger().Infof("hello: %s", to)
 	return "Hello " + to
 }
 
-func helloHandler(
+// TestService ...
+func TestService( 
 	to string,
 	helloService service.HelloService,
 	okService service.OkService,
