@@ -13,6 +13,7 @@ func main() {
 
 	app.Logger().AddOutput()
 	app.Logger().SetLevel("debug")
+	// app.Logger().SetLevel("info")
 
 	app.Use(recover.New())
 	app.Use(logger.New())
