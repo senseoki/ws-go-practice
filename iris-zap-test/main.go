@@ -1,7 +1,6 @@
 package main
 
 import (
-	"fmt"
 	"os"
 	"time"
 
@@ -47,9 +46,9 @@ func main() {
 }
 
 func zapConfig() *zap.Logger {
-	now := time.Now()
+	//now := time.Now()
 	hook := lumberjack.Logger{
-		Filename: fmt.Sprintf("logs/%04d%02d%02d%02d%02d%02d.log", now.Year(), now.Month(), now.Day(), now.Hour(), now.Minute(), now.Second()),
+		Filename: "logs/iris-test.log",
 		MaxSize:  1, // megabytes
 		//MaxBackups: 30,
 		MaxAge:   30, // days
