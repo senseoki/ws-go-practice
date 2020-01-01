@@ -45,13 +45,7 @@ require (
 	go.uber.org/zap v1.13.0
 	golang.org/x/crypto v0.0.0-20191219195013-becbf705a915 // indirect
 	golang.org/x/lint v0.0.0-20191125180803-fdd1cda4f05f // indirect
-<<<<<<< HEAD
-	golang.org/x/net v0.0.0-20191209160850-c0dbc17a3553 // indirect
-	golang.org/x/sync v0.0.0-20190911185100-cd5d95a43a6e // indirect
-	golang.org/x/sys v0.0.0-20191206220618-eeba5f6aabab // indirect
-=======
 	golang.org/x/sys v0.0.0-20191219235734-af0d71d358ab // indirect
->>>>>>> 408122b55b6b0d1bf9c93d464f891b36bb6c3fdc
 	golang.org/x/tools v0.0.0-20191212051200-825cb0626375 // indirect
 	gopkg.in/natefinch/lumberjack.v2 v2.0.0
 	gopkg.in/yaml.v2 v2.2.7 // indirect
