@@ -16,6 +16,7 @@ require (
 	github.com/golang/protobuf v1.3.2 // indirect
 	github.com/golang/snappy v0.0.1 // indirect
 	github.com/google/go-querystring v1.0.0 // indirect
+	github.com/gorilla/websocket v1.4.1
 	github.com/imkira/go-interpol v1.1.0 // indirect
 	github.com/iris-contrib/swagger/v12 v12.0.0
 	github.com/json-iterator/go v1.1.8 // indirect
