@@ -2,7 +2,7 @@ package dblayer
 
 import "github.com/senseoki/ws-go-practice/gomusic/backend/models"
 
-type DBLapper interface {
+type DBLayer interface {
 	GetAllProducts() ([]models.Product, error)
 	GetPromos() ([]models.Product, error)
 	GetCustomerByName(string, string) (models.Customer, error)
@@ -10,6 +10,6 @@ type DBLapper interface {
 	GetProduct(uint) (models.Product, error)
 	AddUser(models.Customer) (models.Customer, error)
 	SignInUser(username, password string) (models.Customer, error)
-	SignOutuserByID(int) error
+	SignOutUserByID(int) error
 	GetCustomerOrdersByID(int) ([]models.Order, error)
 }
