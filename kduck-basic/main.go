@@ -1,7 +1,11 @@
 package main
 
-import "fmt"
+import (
+	"fmt"
+)
 
 func main() {
-	fmt.Println("kduck test")
+	utils.Hello()
+	fmt.Println("kduck test dd")
+	fmt.Println("ddd") 
 }
